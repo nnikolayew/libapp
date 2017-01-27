@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Library.delete_all
+Library.create!(
+    number: '123а',
+    name: 'Библиотека 1',
+    adress:'Москва, Басманного, 10')
+# . . .
+Library.create!(
+    number: '123б',
+    name: 'Библиотека 2',
+    adress:'Москва, Басманного, 11')
+# . . .
+Library.create!(
+    number: '123в',
+    name: 'Библиотека 3',
+    adress:'Москва, Басманного, 12')
+

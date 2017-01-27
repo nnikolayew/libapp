@@ -1,1 +1,23 @@
-<p>sfesfsdfwefsf</p>
+<h1>Listing Libraries</h1>
+
+<table>
+<% @libraries.each do |library| %>
+ <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+     <td class="list_description">
+         <dl>
+             <dt><%= library.number %></dt>
+             <dd><%= truncate(strip_tags(library.name), length: 80) %></dd>
+         </dl>
+     </td>
+     <td class="list_actions">
+         <%= link_to 'Show', library %><br/>
+         <%= link_to 'Edit', edit_library_path(library) %><br/>
+         <%= link_to 'Destroy', library, method: :delete, data: { confirm: 'Are you sure?' } %>
+     </td>
+ </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Library', new_library_path %>
