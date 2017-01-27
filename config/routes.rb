@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
   resources :libraries
-  get 'home/index'
+  get 'libraries/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-    root to: 'home#index', as: 'home'
+    root to: 'libraries#index', as: 'libraries'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

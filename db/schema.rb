@@ -11,6 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170127134746) do
+
+  create_table "libraries", force: :cascade do |t|
+    t.string   "number"
+    t.string   "name"
+    t.string   "adress"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
